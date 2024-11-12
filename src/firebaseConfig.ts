@@ -32,8 +32,14 @@ let app;
 let adminApp;
 
 try {
-  if (!serviceAccountKey.project_id || !serviceAccountKey.private_key || !serviceAccountKey.client_email) {
-    throw new Error("Credenciais do Firebase estão incompletas.");
+  // Validação das credenciais
+  const missingCredentials = [];
+  if (!serviceAccountKey.project_id) missingCredentials.push('FIREBASE_PROJECT_ID');
+  if (!serviceAccountKey.private_key) missingCredentials.push('FIREBASE_PRIVATE_KEY');
+  if (!serviceAccountKey.client_email) missingCredentials.push('FIREBASE_CLIENT_EMAIL');
+
+  if (missingCredentials.length > 0) {
+    throw new Error(`Credenciais do Firebase ausentes: ${missingCredentials.join(', ')}`);
   }
 
   app = initializeApp(firebaseConfig);
@@ -48,7 +54,15 @@ try {
 
   console.log("Firebase inicializado com sucesso");
 } catch (error) {
-  console.error('Erro ao inicializar Firebase:', error);
+  console.error('Erro detalhado ao inicializar Firebase:', {
+    message: error.message,
+    stack: error.stack,
+    serviceAccountKey: {
+      hasProjectId: !!serviceAccountKey.project_id,
+      hasPrivateKey: !!serviceAccountKey.private_key,
+      hasClientEmail: !!serviceAccountKey.client_email
+    }
+  });
   throw error;
 }
 
