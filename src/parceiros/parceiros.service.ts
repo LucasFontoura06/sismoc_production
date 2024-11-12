@@ -13,7 +13,7 @@ import {
   updateDoc,
   where,
 } from 'firebase/firestore';
-import { CONSTANTES } from 'src/common/constantes';
+import { CONSTANTES } from '../common/constantes';
 import { firestore } from 'src/firebaseConfig';
 import { UpdateParceiroDto } from './dto/update-parceiro.dto';
 import { Parceiro } from './entities/parceiro.entity';

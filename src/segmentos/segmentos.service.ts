@@ -12,7 +12,7 @@ import {
   deleteDoc,
   setDoc
 } from 'firebase/firestore';
-import { CONSTANTES } from 'src/common/constantes';
+import { CONSTANTES } from '../common/constantes';
 import { firestore } from 'src/firebaseConfig';
 
 @Injectable()

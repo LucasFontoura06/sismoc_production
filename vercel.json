@@ -5,7 +5,8 @@
             "src": "src/main.ts",
             "use": "@vercel/node",
             "config": {
-                "tsconfigPath": "vercel-tsconfig.json"
+                "tsconfigPath": "vercel-tsconfig.json",
+                "includeFiles": ["src/**/*"]
             }
         }
     ],

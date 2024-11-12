@@ -12,7 +12,7 @@ import {
 import { getAuth } from 'firebase-admin/auth';
 import { adminAuth, auth, firestore } from 'src/firebaseConfig';
 import { Usuario } from './entities/usuario.entity';
-import { CONSTANTES } from 'src/common/constantes';
+import { CONSTANTES } from '../common/constantes';
 import { Injectable } from '@nestjs/common';
 
 

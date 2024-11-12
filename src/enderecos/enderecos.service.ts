@@ -15,7 +15,7 @@ import {
   OrderByDirection
 } from 'firebase/firestore';
 import { firestore } from 'src/firebaseConfig';
-import { CONSTANTES } from 'src/common/constantes';
+import { CONSTANTES } from '../common/constantes';
 
 @Injectable()
 export class EnderecosService {

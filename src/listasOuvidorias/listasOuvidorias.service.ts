@@ -11,7 +11,7 @@ import {
   } from 'firebase/firestore';
   import { Injectable, NotFoundException } from '@nestjs/common';
   import { ListasOuvidoria } from './entities/listasOuvidoria.entity';
-  import { CONSTANTES } from 'src/common/constantes';
+  import { CONSTANTES } from '../common/constantes';
   import { firestore } from 'src/firebaseConfig';
   import { deleteObject, ref } from 'firebase/storage';
   import { storage } from 'src/firebaseConfig';
