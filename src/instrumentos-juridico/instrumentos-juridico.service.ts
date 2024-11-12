@@ -15,7 +15,7 @@ import {
   updateDoc
 } from 'firebase/firestore';
 import { CONSTANTES } from '../common/constantes';
-import { firestore } from 'src/firebaseConfig';
+import { firestore } from '../firebaseConfig';
 import { TipoInstrumentoJuridico } from './entities/tipo-instrumento-juridico';
 import { Status } from './entities/status';
 

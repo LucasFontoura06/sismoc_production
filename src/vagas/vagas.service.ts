@@ -17,7 +17,7 @@ import {
   query
 } from 'firebase/firestore';
 import { CONSTANTES } from '../common/constantes';
-import { firestore } from 'src/firebaseConfig';
+import { firestore } from '../firebaseConfig';
 
 @Injectable()
 export class VagasService {

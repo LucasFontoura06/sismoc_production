@@ -9,7 +9,7 @@ import {
   setDoc
 } from 'firebase/firestore';
 import { CONSTANTES } from '../common/constantes';
-import { firestore } from 'src/firebaseConfig';
+import { firestore } from '../firebaseConfig';
 import { CreateTiposParceiroDto } from './dto/create-tipos-parceiro.dto';
 import { UpdateTiposParceiroDto } from './dto/update-tipos-parceiro.dto';
 import { TiposParceiro } from './entities/tipos-parceiro.entity';

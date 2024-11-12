@@ -10,7 +10,7 @@ import {
   updateDoc 
 } from 'firebase/firestore';import { createUserWithEmailAndPassword} from 'firebase/auth';
 import { getAuth } from 'firebase-admin/auth';
-import { adminAuth, auth, firestore } from 'src/firebaseConfig';
+import { adminAuth, auth, firestore } from '../firebaseConfig';
 import { Usuario } from './entities/usuario.entity';
 import { CONSTANTES } from '../common/constantes';
 import { Injectable } from '@nestjs/common';

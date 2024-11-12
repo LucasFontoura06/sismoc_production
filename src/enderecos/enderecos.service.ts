@@ -14,7 +14,7 @@ import {
   orderBy,
   OrderByDirection
 } from 'firebase/firestore';
-import { firestore } from 'src/firebaseConfig';
+import { firestore } from '../firebaseConfig';
 import { CONSTANTES } from '../common/constantes';
 
 @Injectable()
